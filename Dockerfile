@@ -4,7 +4,7 @@ ENV HOME /app
 WORKDIR HOME
 
 COPY requirements.txt .
-RUN python 3 -m pip install requirements.txt
+RUN python3 -m pip install -r requirements.txt
 
 COPY app.py .
 COPY entrypoint.sh .
