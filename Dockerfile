@@ -1,6 +1,6 @@
 FROM python:3.9
 
-WORKDIR HOME
+WORKDIR /code
 
 COPY requirements.txt .
 RUN python3 -m pip install -r requirements.txt
