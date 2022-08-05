@@ -2,11 +2,13 @@ version: '3.3'
 
 services:
   web:
-    image: 343435/skypro_docker_test:test
+    image: medstoun/cw4_docker
     build: .
     ports:
       - "80:8080"
     restart: always
+    depends_on:
+      - db
   db:
     image: postgres
     environment:
