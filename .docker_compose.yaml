@@ -1,0 +1,15 @@
+version: '3.3'
+
+services:
+  web:
+    image: 343435/skypro_docker_test:test
+    build: .
+    ports:
+      - "80:8080"
+    restart: always
+  db:
+    image: postgres
+    environment:
+      POSTGRES_USER: flask_app
+      POSTGRES_PASSWORD: flask_app_password
+      POSTGRES_DB: flask_app
